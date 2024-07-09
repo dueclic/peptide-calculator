@@ -1,4 +1,4 @@
-import React, {useMemo, useState} from 'react';
+import React, {useMemo, useRef, useState} from 'react';
 import {Button} from "./atoms/Button";
 import {useTranslation} from "react-i18next";
 import {Pad} from "./atoms/Pad";
@@ -27,7 +27,8 @@ const Calculator: React.FC = () => {
     const [waterVolumeOther, setWaterVolumeOther] = useState<number | null>(null);
     const [dose, setDose] = useState<number | 'other'>(defaultDose);
     const [doseOther, setDoseOther] = useState<number | null>(null);
-    const [result, setResult] = useState<string>('');
+    const [syringeUnits, setSyringeUnits] = useState<number | null>(null);
+    const progressBarEl = useRef<HTMLDivElement>(null);
 
     const vialQualityValue = useMemo(() => {
         if (vialQuality === 'other') {
@@ -54,20 +55,27 @@ const Calculator: React.FC = () => {
         return !!(vialQualityValue && waterVolumeValue && doseValue);
     }, [vialQualityValue,waterVolumeValue, doseValue ]);
 
+    const progressBarWidth = useMemo(() => {
+        if (!syringeUnits || !progressBarEl.current?.offsetWidth){
+            return 0;
+        }
+        const progressBarWidth = progressBarEl.current.offsetWidth * syringeUnits / 30;
+
+        if (progressBarWidth > progressBarEl.current.offsetWidth){
+            return progressBarEl.current.offsetWidth;
+        }
+
+        return progressBarWidth;
+
+    }, [syringeUnits,progressBarEl]);
+
     const calculateDose = () => {
         if (vialQualityValue && waterVolumeValue && doseValue) {
             const concentration = vialQualityValue / waterVolumeValue;
             const concentrationMcgMl = concentration * 1000;
             const volumeForDose = doseValue / concentrationMcgMl;
-            const totalSyringeUnits = 100 * syringeVolume; // Ad esempio, 0.3 ml -> 30 unità, 1 ml -> 100 unità
-            const syringeUnits = (volumeForDose / syringeVolume) * totalSyringeUnits;
-            if (syringeUnits > totalSyringeUnits) {
-                setResult(t('calculated_volume_exceeds'));
-            } else {
-                setResult(t('dose_instructions', { dose: doseValue, units: syringeUnits.toFixed(2) }));
-            }
-        } else {
-            setResult(t('invalid_values'));
+            const totalSyringeUnits = 100 * syringeVolume;
+            setSyringeUnits((volumeForDose / syringeVolume) * totalSyringeUnits);
         }
     };
 
@@ -170,10 +178,21 @@ const Calculator: React.FC = () => {
             </div>
             <div className="section mb-5">
                 <button type="button" disabled={!isFormValid}
-                        className="calculate-btn mt-5 p-4 text-xl rounded-md font-semibold bg-orange-600 disabled:bg-orange-200 hover:bg-orange-700"
+                        className="calculate-btn mt-5 p-4 text-xl rounded-md font-semibold bg-yellow-600 disabled:bg-yellow-200 hover:bg-yellow-700"
                         onClick={calculateDose}>{t('calculate')}</button>
             </div>
-            <div className="result mt-5 text-lg text-yellow-500 font-semibold" id="result">{result}</div>
+            <div className="result mt-5 text-lg text-yellow-500 font-semibold" id="result">
+                {!syringeUnits && t('invalid_values')}
+                {syringeUnits && syringeUnits && t('dose_instructions', { dose: doseValue, units: syringeUnits.toFixed(2) })}
+            </div>
+
+            <div  ref={progressBarEl}  className={"bg-no-repeat bg-contain border-0 w-full h-[60px] bg-white"} style={{
+                backgroundImage: `url('${process.env.PUBLIC_URL}/images/30ml-04.png')`
+            }}>
+                <div id="my-progress" className={"bar border-0 bg-yellow-100 bg-opacity-50 h-full"} style={{
+                    width: progressBarWidth+'px'
+                }}></div>
+            </div>
 
             {process.env.NODE_ENV === 'development' && <pre className="debug">
                 ENV = {process.env.NODE_ENV}<br/>
