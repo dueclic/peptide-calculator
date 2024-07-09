@@ -10,10 +10,10 @@ interface PadProps {
 export const Pad: React.FC<PadProps> = ({onClick, selected, text, image}) => {
 
 
-    const standardClassName = `flex flex-col justify-between items-center md:h-44 md:w-44 cursor-pointer rounded-md border-2 border-yellow-500 bg-black text-yellow-500
-    transition-colors duration-300 ease-in-out text-lg hover:bg-gray-800 hover:text-yellow-500`;
+    const standardClassName = `flex flex-col justify-between items-center md:h-44 md:w-44 cursor-pointer rounded-md border-2 border-alkemya-500 bg-black text-alkemya-500
+    transition-colors duration-300 ease-in-out text-lg hover:bg-gray-800 hover:text-alkemya-500`;
 
-    const selectedClassName = `flex flex-col justify-between items-center md:h-44 md:w-44 cursor-pointer rounded-md border-2 border-yellow-500 bg-yellow-500 text-black
+    const selectedClassName = `flex flex-col justify-between items-center md:h-44 md:w-44 cursor-pointer rounded-md border-2 border-alkemya-500 bg-alkemya-500 text-black
     transition-colors duration-300 ease-in-out text-lg`;
 
     return <div className={selected ? selectedClassName : standardClassName}

@@ -4,7 +4,16 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      'colony': 'Colony, Arial, sans-serif',
+    },
+    extend: {
+      colors: {
+        'alkemya': {
+          500: '#faec11'
+        }
+      },
+    },
   },
   plugins: [],
 }

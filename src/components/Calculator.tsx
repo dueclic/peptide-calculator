@@ -81,10 +81,10 @@ const Calculator: React.FC = () => {
 
     return (
         <div className="calculator">
-            <h1 className="text-2xl text-yellow-500 mb-8 font-bold uppercase">{t('title')}</h1>
+            <h1 className="text-2xl text-alkemya-500 mb-8 font-bold uppercase">{t('title')}</h1>
 
             <div className="section mb-5">
-                <h2 className="text-xl text-yellow-500 mb-4 font-semibold">{t('syringeVolume')}</h2>
+                <h2 className="text-xl text-alkemya-500 mb-4 font-semibold">{t('syringeVolume')}</h2>
 
                     <div className="flex justify-center space-x-4">
                         <Pad onClick={() => setSyringeVolume(0.3)}
@@ -105,7 +105,7 @@ const Calculator: React.FC = () => {
                     </div>
             </div>
             <div className="section mb-5">
-                <h2 className="text-xl text-yellow-500 mb-4 font-semibold">{t('vialQuality')}</h2>
+                <h2 className="text-xl text-alkemya-500 mb-4 font-semibold">{t('vialQuality')}</h2>
                 <div className="flex justify-center space-x-1 md:space-x-4">
                     {
                         Object.entries(vialQualities)
@@ -129,7 +129,7 @@ const Calculator: React.FC = () => {
                 </div>
             </div>
             <div className="section mb-5">
-                <h2 className="text-xl text-yellow-500 mb-4 font-semibold">{t('waterVolume')}</h2>
+                <h2 className="text-xl text-alkemya-500 mb-4 font-semibold">{t('waterVolume')}</h2>
                 <div className="flex justify-center space-x-1 md:space-x-4">
                     {
                         Object.entries(waterVolumes)
@@ -153,7 +153,7 @@ const Calculator: React.FC = () => {
                 </div>
             </div>
             <div className="section mb-5">
-                <h2 className="text-xl text-yellow-500 mb-4 font-semibold">{t('dose')}</h2>
+                <h2 className="text-xl text-alkemya-500 mb-4 font-semibold">{t('dose')}</h2>
                 <div className="flex justify-center space-x-1 md:space-x-4">
                     {
                         Object.entries(doses)
@@ -178,10 +178,10 @@ const Calculator: React.FC = () => {
             </div>
             <div className="section mb-5">
                 <button type="button" disabled={!isFormValid}
-                        className="calculate-btn mt-5 p-4 text-xl rounded-md font-semibold bg-yellow-600 disabled:bg-yellow-200 hover:bg-yellow-700"
+                        className="calculate-btn font-colony  mt-5 p-2 text-xl uppercase text-black border border-black font-semibold bg-alkemya-500 disabled:bg-yellow-200"
                         onClick={calculateDose}>{t('calculate')}</button>
             </div>
-            <div className="result mt-5 text-lg text-yellow-500 font-semibold" id="result">
+            <div className="result mt-5 text-lg text-alkemya-500 font-semibold" id="result">
                 {!syringeUnits && t('invalid_values')}
                 {syringeUnits && syringeUnits && t('dose_instructions', { dose: doseValue, units: syringeUnits.toFixed(2) })}
             </div>
