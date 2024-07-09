@@ -78,8 +78,7 @@ const Calculator: React.FC = () => {
             <div className="section mb-5">
                 <h2 className="text-xl text-yellow-500 mb-4 font-semibold">{t('syringeVolume')}</h2>
 
-                <div className="container mx-auto">
-                    <div className="flex space-x-4">
+                    <div className="flex justify-center space-x-4">
                         <Pad onClick={() => setSyringeVolume(0.3)}
                              selected={syringeVolume === 0.3}
                              image={`${process.env.PUBLIC_URL}/images/syringe_0.3ml.png`}
@@ -96,12 +95,10 @@ const Calculator: React.FC = () => {
                              text={"1ml"}
                         />
                     </div>
-                </div>
-
             </div>
             <div className="section mb-5">
                 <h2 className="text-xl text-yellow-500 mb-4 font-semibold">{t('vialQuality')}</h2>
-                <div className="flex justify-center space-x-4">
+                <div className="flex justify-center space-x-1 md:space-x-4">
                     {
                         Object.entries(vialQualities)
                             .map(([_, {text, value}]) => (
@@ -114,7 +111,7 @@ const Calculator: React.FC = () => {
 
                     }
                 </div>
-                <div className="flex justify-center space-x-4">
+                <div className="flex justify-center space-x-1 md:space-x-4">
                     <div className={"flex flex-col justify-between items-center"}>
                         {vialQuality === 'other' &&
                             <InputNumber value={vialQualityOther} onChange={(ev) => setVialQualityOther(
@@ -125,7 +122,7 @@ const Calculator: React.FC = () => {
             </div>
             <div className="section mb-5">
                 <h2 className="text-xl text-yellow-500 mb-4 font-semibold">{t('waterVolume')}</h2>
-                <div className="flex justify-center space-x-4">
+                <div className="flex justify-center space-x-1 md:space-x-4">
                     {
                         Object.entries(waterVolumes)
                             .map(([_, {text, value}]) => (
@@ -138,7 +135,7 @@ const Calculator: React.FC = () => {
 
                     }
                 </div>
-                <div className="flex justify-center space-x-4">
+                <div className="flex justify-center space-x-1 md:space-x-4">
                     <div className={"flex flex-col justify-between items-center"}>
                         {waterVolume === 'other' &&
                             <InputNumber value={vialQualityOther}  onChange={(ev) => setWaterVolumeOther(
@@ -149,7 +146,7 @@ const Calculator: React.FC = () => {
             </div>
             <div className="section mb-5">
                 <h2 className="text-xl text-yellow-500 mb-4 font-semibold">{t('dose')}</h2>
-                <div className="flex justify-center space-x-4">
+                <div className="flex justify-center space-x-1 md:space-x-4">
                     {
                         Object.entries(doses)
                             .map(([_, {text, value}]) => (
@@ -162,7 +159,7 @@ const Calculator: React.FC = () => {
 
                     }
                 </div>
-                <div className="flex justify-center space-x-4">
+                <div className="flex justify-center space-x-1 md:space-x-4">
                     <div className={"flex flex-col justify-between items-center"}>
                         {dose === 'other' &&
                             <InputNumber value={doseOther} onChange={(ev) => setDoseOther(

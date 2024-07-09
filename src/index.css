@@ -4,6 +4,6 @@
 
 @layer base {
   body {
-    @apply flex justify-center items-center h-screen bg-black text-white
+    @apply flex justify-center items-center bg-black text-white
   }
 }
