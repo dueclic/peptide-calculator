@@ -1,0 +1,16 @@
+{
+  "title": "Peptide Reconstitution Calculator (Beta)",
+  "syringeVolume": "What is the total volume of your syringe?",
+  "vialQuality": "Select Peptide Vial Quality",
+  "waterVolume": "How much bacteriostatic water are you adding?",
+  "dose": "How much of the Peptide do you want in each dose?",
+  "calculate": "Calculate",
+  "result": "To have a dose of {DOSE} mcg, pull the syringe to {VOLUME} units.",
+  "other": "Other",
+  "enterValueInMg": "Enter value in mg",
+  "enterValueInMl": "Enter value in ml",
+  "enterValueInMcg": "Enter value in mcg",
+  "calculated_volume_exceeds": "The calculated volume exceeds the syringe volume.",
+  "dose_instructions": "To have a dose of {{dose}} mcg pull the syringe to {{units}}.",
+  "invalid_values": "Please make sure all values are provided and valid."
+}

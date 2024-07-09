@@ -1,0 +1,16 @@
+{
+  "title": "Calcolatore di Ricostituzione Peptidica (Beta)",
+  "syringeVolume": "Qual è il volume totale della tua siringa?",
+  "vialQuality": "Seleziona la Qualità della Fiala Peptidica",
+  "waterVolume": "Quanta acqua batteriostatica stai aggiungendo?",
+  "dose": "Quanta Peptide vuoi in ogni dose?",
+  "calculate": "Calcola",
+  "result": "Per avere una dose di {DOSE} mcg, tira la siringa a {VOLUME} unità.",
+  "other": "Altro",
+  "enterValueInMg": "Inserisci il valore in mg",
+  "enterValueInMl": "Inserisci il valore in ml",
+  "enterValueInMcg": "Inserisci il valore in mcg",
+  "calculated_volume_exceeds": "Il volume calcolato supera il volume della siringa.",
+  "dose_instructions": "Per avere una dose di {{dose}} mcg, tirare la siringa a {{units}}.",
+  "invalid_values": "Si prega di assicurarsi che tutti i valori siano forniti e validi."
+}
