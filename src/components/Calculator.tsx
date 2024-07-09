@@ -148,7 +148,7 @@ const Calculator: React.FC = () => {
                 <div className="flex justify-center space-x-1 md:space-x-4">
                     <div className={"flex flex-col justify-between items-center"}>
                         {waterVolume === 'other' &&
-                            <InputNumber value={vialQualityOther} onChange={(ev) => setWaterVolumeOther(
+                            <InputNumber value={waterVolumeOther} onChange={(ev) => setWaterVolumeOther(
                                 parseFloat(ev.target.value)
                             )} placeholder={t('enterValueInMl')}/>}
                     </div>
