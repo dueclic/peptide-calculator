@@ -82,17 +82,17 @@ const Calculator: React.FC = () => {
                     <div className="flex space-x-4">
                         <Pad onClick={() => setSyringeVolume(0.3)}
                              selected={syringeVolume === 0.3}
-                             image={"./images/syringe_0.3ml.png"}
+                             image={`${process.env.PUBLIC_URL}/images/syringe_0.3ml.png`}
                              text={"0.3ml"}
                         />
                         <Pad onClick={() => setSyringeVolume(0.5)}
                              selected={syringeVolume === 0.5}
-                             image={"./images/syringe_0.5ml.png"}
+                             image={`${process.env.PUBLIC_URL}/images/syringe_0.5ml.png`}
                              text={"0.5ml"}
                         />
                         <Pad onClick={() => setSyringeVolume(1)}
                              selected={syringeVolume === 1}
-                             image={"./images/syringe_1ml.png"}
+                             image={`${process.env.PUBLIC_URL}/images/syringe_1ml.png`}
                              text={"1ml"}
                         />
                     </div>
