@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/peptide-calculator/static/css/main.17fccf3f.css",
-    "main.js": "/peptide-calculator/static/js/main.7f7b9180.js",
+    "main.css": "/peptide-calculator/static/css/main.13d1030f.css",
+    "main.js": "/peptide-calculator/static/js/main.11507a97.js",
     "static/js/453.d02107ae.chunk.js": "/peptide-calculator/static/js/453.d02107ae.chunk.js",
     "index.html": "/peptide-calculator/index.html",
     "static/media/getFetch.cjs": "/peptide-calculator/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
-    "main.17fccf3f.css.map": "/peptide-calculator/static/css/main.17fccf3f.css.map",
-    "main.7f7b9180.js.map": "/peptide-calculator/static/js/main.7f7b9180.js.map",
+    "main.13d1030f.css.map": "/peptide-calculator/static/css/main.13d1030f.css.map",
+    "main.11507a97.js.map": "/peptide-calculator/static/js/main.11507a97.js.map",
     "453.d02107ae.chunk.js.map": "/peptide-calculator/static/js/453.d02107ae.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.17fccf3f.css",
-    "static/js/main.7f7b9180.js"
+    "static/css/main.13d1030f.css",
+    "static/js/main.11507a97.js"
   ]
 }
