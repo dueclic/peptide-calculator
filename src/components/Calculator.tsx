@@ -186,7 +186,7 @@ const Calculator: React.FC = () => {
 
             {submitted && <div className="result mt-5 text-lg text-alkemya-500 font-semibold" id="result">
                     {!syringeUnits && t('invalid_values')}
-                    {syringeUnits && syringeUnits && t('dose_instructions', {
+                    {syringeUnits && t('dose_instructions', {
                         dose: doseValue,
                         units: syringeUnits.toFixed(2)
                     })}
