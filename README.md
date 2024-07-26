@@ -1,6 +1,6 @@
-# Peptide Reconstitution Calculator (Beta)
+# Peptide Reconstitution Calculator
 
-![App Screenshot](https://github.com/dueclic/peptide-calculator/raw/main/public/screenshot.png?raw=true)
+![App Screenshot](https://github.com/dueclic/peptide-calculator/raw/main/public/images/screenshot.png?raw=true)
 
 ## Description
 
