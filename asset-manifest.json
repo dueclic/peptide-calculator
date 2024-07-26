@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/peptide-calculator/static/css/main.4727cced.css",
-    "main.js": "/peptide-calculator/static/js/main.cc11546e.js",
+    "main.css": "/peptide-calculator/static/css/main.9068d2d1.css",
+    "main.js": "/peptide-calculator/static/js/main.babc0a50.js",
     "static/js/453.d02107ae.chunk.js": "/peptide-calculator/static/js/453.d02107ae.chunk.js",
     "static/media/ColonBol.ttf": "/peptide-calculator/static/media/ColonBol.8f9b4698dc68be520ee3.ttf",
     "index.html": "/peptide-calculator/index.html",
     "static/media/getFetch.cjs": "/peptide-calculator/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
-    "main.4727cced.css.map": "/peptide-calculator/static/css/main.4727cced.css.map",
-    "main.cc11546e.js.map": "/peptide-calculator/static/js/main.cc11546e.js.map",
+    "main.9068d2d1.css.map": "/peptide-calculator/static/css/main.9068d2d1.css.map",
+    "main.babc0a50.js.map": "/peptide-calculator/static/js/main.babc0a50.js.map",
     "453.d02107ae.chunk.js.map": "/peptide-calculator/static/js/453.d02107ae.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4727cced.css",
-    "static/js/main.cc11546e.js"
+    "static/css/main.9068d2d1.css",
+    "static/js/main.babc0a50.js"
   ]
 }
