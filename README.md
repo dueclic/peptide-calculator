@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+# Peptide Reconstitution Calculator (Beta)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![App Screenshot](https://github.com/dueclic/peptide-calculator/raw/main/public/screenshot.png?raw=true)
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+The "Peptide Reconstitution Calculator" is a web application developed with React that helps users calculate the necessary peptide amount based on various parameters such as syringe volume, peptide vial quality, the amount of added bacteriostatic water, and the desired peptide amount per dose.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Syringe volume selection**: 0.3ml, 0.5ml, 1ml.
+- **Peptide vial quality selection**: 5mg, 10mg, 15mg, Other.
+- **Amount of added bacteriostatic water**: 1ml, 2ml, 3ml, 5ml, Other.
+- **Desired peptide amount per dose**: 50mcg, 100mcg, 250mcg, 500mcg, Other.
+- **Automatic calculation** of the necessary peptide amount.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `npm test`
+To install and run the project locally, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/dueclic/peptide-calculator.git
+    ```
 
-### `npm run build`
+2. **Navigate to the project directory**:
+    ```bash
+    cd peptide-calculator
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Start the application**:
+    ```bash
+    npm run start
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. **Open your browser** and go to `http://localhost:3000` to view the application.
 
-### `npm run eject`
+## Technologies Used
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- **React**: JavaScript library for building user interfaces.
+- **CSS**: For styling the application.
+- **HTML**: For the structure of the web page.
+- **JavaScript**: Programming language used for the application's logic.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Credits
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Developed by: [dueclic](https://www.dueclic.com) - 2024
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## License
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is licensed under the MIT License. See the LICENSE file for details.
