@@ -1,7 +1,15 @@
 import i18n from "i18next";
 import {initReactI18next} from "react-i18next";
 import Backend from 'i18next-http-backend';
-import LanguageDetector from "i18next-browser-languagedetector";
+import LanguageDetector, {CustomDetector} from "i18next-browser-languagedetector";
+
+const alkwpDetector: CustomDetector = {
+    name: 'alkwpDetector',
+    lookup() {
+        return (window as any).alkwp && (window as any).alkwp.lang ? (window as any).alkwp.lang : null;
+    }
+};
+
 i18n
     .use(Backend)
     .use(LanguageDetector)
@@ -13,7 +21,7 @@ i18n
         fallbackLng: "en",
         supportedLngs: ["en", "it"],
         detection: {
-            order: ['querystring', 'navigator', 'htmlTag'],
+            order: ['alkwpDetector', 'querystring', 'navigator', 'htmlTag'],
             lookupQuerystring: 'lang'
         },
         react: {
@@ -23,5 +31,7 @@ i18n
             escapeValue: false
         }
     });
+
+i18n.services.languageDetector.addDetector(alkwpDetector);
 
 export default i18n;
