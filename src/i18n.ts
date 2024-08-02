@@ -6,7 +6,7 @@ import LanguageDetector, {CustomDetector} from "i18next-browser-languagedetector
 const alkwpDetector: CustomDetector = {
     name: 'alkwpDetector',
     lookup() {
-        return (window as any).alkwp && (window as any).alkwp.lang ? (window as any).alkwp.lang : null;
+        return window?.alkwp?.lang;
     }
 };
 
