@@ -7,8 +7,8 @@ const App: React.FC = () => {
     const [hideCopyright, setHideCopyright] = useState<boolean>(false);
 
     useEffect(() => {
-        if (window?.alkwp?.hide_copyright) {
-            setHideCopyright(window.alkwp.hide_copyright);
+        if (!process.env.HIDE_COPYRIGHT || window?.alkwp?.hide_copyright) {
+            setHideCopyright(true);
         }
     }, []);
 
